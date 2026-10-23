@@ -1,2 +1,33 @@
-# DAX-DATA-VISUALIZATION
+DAX-DATA-VISUALIZATION
 This project focuses on E-Commerce Sales Analysis using Power BI, DAX calculations, and interactive visualizations. It includes calculated columns, sales and profit measures, sales target comparisons, monthly sales trends, and category-wise performance analysis to generate meaningful business insights.
+Overview
+This project uses Power BI to analyse an e-commerce sales dataset through calculated columns, DAX measures, and visual reports. The assignment questionnaire specifies three tables—List of Orders, Order Details, and Sales Target—and asks for product-category derivations, revenue calculations, sales categorisation, order and profit measures, year-to-date sales, and visuals comparing sales with targets, profitability, monthly trends, geography, sub-categories, and states. The submitted screenshots show work on the calculated columns, several measures, and a selection of charts and cards. The screenshots indicate that the Order Details table contains 1,500 rows and that the List of Orders table has a distinct-order count of 560 in the displayed card. The report also displays total sales of approximately 431.50K and a total target card of 5M. These values are read from the screenshots and should be treated as displayed report outputs, not independently audited figures.
+Work Completed Against the Questionnaire
+•	Calculated columns: Category Type combines Category and Sub-Category; Revenue is calculated as Amount × Quantity; Sales Category classifies records as Above Average or Below Average.
+•	DAX measures: An order-count measure/card, an Average Profit in Delhi measure/card, and a Total Sales measure/card are visible. A YTD Sales measure appears in the field list, but a warning icon is shown beside it in one screenshot; validate the formula before relying on it.
+•	Sales vs target: A clustered column chart compares Total Sales and Total Target by category.
+•	Profitability: A donut chart is titled Max Profit Margin by Sub-Category.
+•	Time trend: A line chart titled Total Sale by Month Year is present.
+•	Profit and quantity: A scatter chart titled Total Profit by Quantity is present.
+•	Cards and matrix: Cards display Total Sale and Total Target; a multi-row card and a sales performance matrix are also shown.
+•	Geographic analysis: A map visual is attempted, but Power BI reports that map and filled-map visuals are disabled.
+Overview Insights
+•	The displayed Total Sales card reports 431.50K, while the Total Target card reports 5M. This suggests a substantial gap in the current report view; however, the target measure and filter context should be checked before drawing a final performance conclusion.
+•	In the category comparison chart, Electronics actual sales appear higher than the displayed target, while Clothing actual sales appear below target. Furniture actual sales appear close to, but slightly below, the displayed target. These comparisons are based on the bars shown in the screenshot.
+•	The category chart shows Clothing with the highest target among the three categories, while Electronics has the highest actual sales in the displayed chart.
+•	The profit-by-quantity scatter plot shows differing profit levels across quantities. Some quantity points have notably higher profit than others, indicating that quantity alone does not explain profit performance.
+•	The donut chart contains multiple sub-category slices, but several labels display long decimal values and similar-looking percentages. The measure formatting and chart labels should be improved so the maximum profit margin can be compared clearly.
+•	The monthly sales line is almost flat at about 431.5K across the displayed month labels. This is unlikely to communicate a meaningful month-by-month trend and may indicate that the date field, relationships, or measure is not responding to the month context correctly.
+•	The matrix shows repeated month groups and an apparent limited category result in the captured view. Check the model relationships, month sorting, and visual filters to ensure all categories and months are represented correctly.
+•	The map is unavailable because map visuals are disabled in Power BI settings. Therefore, no reliable geographic sales insight can be concluded from the submitted map screenshot.
+Recommendations for Improvement
+•	Validate the Total Target calculation. Confirm that the target table is aggregated at the intended category-month grain and that targets are not being duplicated through relationships or repeated rows.
+•	Check the YTD Sales measure and resolve the warning icon visible beside it. Use a proper date table related to the order date for reliable time-intelligence calculations.
+•	Sort Month Year by a numeric/date key so the line chart follows chronological order rather than alphabetical order.
+•	Test the monthly sales measure with a table visual containing Month Year and Total Sales. If each month repeats the same grand total, review the date relationship and measure filter context.
+•	Format profit-margin values as percentages with a sensible number of decimal places, and simplify donut labels or use a bar chart if comparisons are difficult.
+•	Review the Sales Category rule to ensure the benchmark is the intended average (for example, average Amount across the relevant records) and document the threshold used.
+•	Enable map visuals only if permitted by the organisation's Power BI security settings. Otherwise, use a bar chart by State or City as an alternative geographic comparison.
+•	Improve the dashboard layout by aligning visuals, reducing unused canvas space, adding clear titles, and applying consistent number formats (K/M or currency) and labels.
+Conclusion
+This assignment demonstrates the use of Power BI calculated columns, DAX measures, and visualisations to explore e-commerce sales, targets, and profitability. The submitted work includes the Category Type, Revenue, and Sales Category calculated columns, along with cards and visuals for order count, sales, category-level target comparison, profit margin, monthly sales, and profit versus quantity. The displayed figures suggest total sales of about 431.50K and a target of 5M, while the category chart indicates stronger actual sales for Electronics and a shortfall against target for Clothing and Furniture in the captured view. Before final submission, the target aggregation, YTD measure, monthly trend context, matrix configuration, chart formatting, and disabled map visual should be reviewed. After these checks, the report will communicate the sales performance more accurately and meet the assignment's emphasis on correct DAX, appropriate visual selection, readable formatting, and meaningful business interpretation.
